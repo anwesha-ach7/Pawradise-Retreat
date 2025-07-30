@@ -3,29 +3,114 @@
     <head>
         <meta charset="utf-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
-        <meta name="description" content="" />
+        <meta name="description" content="Premium dog care services including shelter stays, food plans, and fashionable accessories" />
         <meta name="author" content="" />
-        <title>Modern Business - Start Bootstrap Template</title>
+        <title>Paw Palace - Premium Dog Care Services</title>
         <!-- Favicon-->
         <link rel="icon" type="image/x-icon" href="assets/favicon.ico" />
         <!-- Bootstrap icons-->
         <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css" rel="stylesheet" />
         <!-- Core theme CSS (includes Bootstrap)-->
         <link href="css/styles.css" rel="stylesheet" />
+        <style>
+            .pricing-card {
+                transition: all 0.3s ease;
+                border-radius: 15px;
+                overflow: hidden;
+                border: none;
+                box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+                position: relative;
+                min-height: 500px;
+            }
+            
+            .pricing-card:hover {
+                transform: translateY(-10px);
+                box-shadow: 0 15px 30px rgba(0,0,0,0.2);
+            }
+            
+            .pricing-card::before {
+                content: '';
+                position: absolute;
+                top: 0;
+                left: 0;
+                right: 0;
+                bottom: 0;
+                background: rgba(0,0,0,0.4);
+                z-index: 1;
+            }
+            
+            .card-body {
+                position: relative;
+                z-index: 2;
+                color: white;
+                background: linear-gradient(to bottom, rgba(0,0,0,0.7), rgba(0,0,0,0.3));
+            }
+            
+            .food-card {
+                background: url('https://images.unsplash.com/photo-1589927986089-35812388d1f4?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80') center/cover;
+            }
+            
+            .shelter-card {
+                background: url('https://images.unsplash.com/photo-1560743641-3914f2c45636?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80') center/cover;
+            }
+            
+            .clothing-card {
+                background: url('https://images.unsplash.com/photo-1583337130417-3346a1be7dee?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80') center/cover;
+            }
+            
+            .section-title {
+                position: relative;
+                display: inline-block;
+                margin-bottom: 30px;
+            }
+            
+            .section-title::after {
+                content: '';
+                position: absolute;
+                width: 50%;
+                height: 3px;
+                background: linear-gradient(to right, #ff8a00, #da1b60);
+                bottom: -10px;
+                left: 25%;
+            }
+            
+            .btn-primary, .btn-outline-primary {
+                border-radius: 50px;
+                padding: 10px 25px;
+                font-weight: 600;
+                transition: all 0.3s;
+            }
+            
+            .btn-outline-primary {
+                border: 2px solid white;
+                color: white;
+                background: transparent;
+            }
+            
+            .btn-outline-primary:hover {
+                background: white;
+                color: #0d6efd;
+            }
+            
+            .list-unstyled li {
+                padding: 8px 0;
+                border-bottom: 1px solid rgba(255,255,255,0.1);
+            }
+        </style>
     </head>
     <body class="d-flex flex-column">
         <main class="flex-shrink-0">
             <!-- Navigation-->
             <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
                 <div class="container px-5">
-                    <a class="navbar-brand" href="index.html">Start Bootstrap</a>
+                    <a class="navbar-brand" href="index.html">Paw Palace</a>
                     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
                     <div class="collapse navbar-collapse" id="navbarSupportedContent">
                         <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
                             <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
                             <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
                             <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
-                            <li class="nav-item"><a class="nav-link" href="pricing.html">Pricing</a></li>
+                            <li class="nav-item"><a class="nav-link active" href="pricing.html">Pricing</a></li>
                             <li class="nav-item"><a class="nav-link" href="faq.html">FAQ</a></li>
                             <li class="nav-item dropdown">
                                 <a class="nav-link dropdown-toggle" id="navbarDropdownBlog" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">Blog</a>
@@ -34,100 +119,94 @@
                                     <li><a class="dropdown-item" href="blog-post.html">Blog Post</a></li>
                                 </ul>
                             </li>
-                            <li class="nav-item dropdown">
-                                <a class="nav-link dropdown-toggle" id="navbarDropdownPortfolio" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">Portfolio</a>
-                                <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdownPortfolio">
-                                    <li><a class="dropdown-item" href="portfolio-overview.html">Portfolio Overview</a></li>
-                                    <li><a class="dropdown-item" href="portfolio-item.html">Portfolio Item</a></li>
-                                </ul>
-                            </li>
                         </ul>
                     </div>
                 </div>
             </nav>
             
-<!-- Pricing section-->
-<section class="bg-light py-5">
-    <div class="container px-5 my-5">
-        <div class="text-center mb-5">
-            <h1 class="fw-bolder">Care Options for Every Pup</h1>
-            <p class="lead fw-normal text-muted mb-0">Affordable and loving care for your best friend</p>
-        </div>
-        <div class="row gx-5 justify-content-center">
-            <!-- Dog Food Plan -->
-            <div class="col-lg-6 col-xl-4">
-                <div class="card mb-5 mb-xl-0">
-                    <div class="card-body p-5">
-                        <div class="small text-uppercase fw-bold text-muted">Dog Food Plan</div>
-                        <div class="mb-3">
-                            <span class="display-4 fw-bold">$20</span>
-                            <span class="text-muted">/ mo.</span>
-                        </div>
-                        <ul class="list-unstyled mb-4">
-                            <li class="mb-2"><i class="bi bi-check text-primary"></i> 5kg Premium Dog Food</li>
-                            <li class="mb-2"><i class="bi bi-check text-primary"></i> Grain-Free Options</li>
-                            <li class="mb-2"><i class="bi bi-check text-primary"></i> Monthly Delivery</li>
-                            <li class="mb-2 text-muted"><i class="bi bi-x"></i> Treat Packs</li>
-                            <li class="mb-2 text-muted"><i class="bi bi-x"></i> Custom Meal Plan</li>
-                        </ul>
-                        <div class="d-grid"><a class="btn btn-outline-primary" href="#!">Choose Plan</a></div>
+            <!-- Pricing section-->
+            <section class="py-5" style="background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);">
+                <div class="container px-5 my-5">
+                    <div class="text-center mb-5">
+                        <h1 class="fw-bolder section-title">Care Options for Every Pup</h1>
+                        <p class="lead fw-normal text-muted mb-0">Affordable and loving care for your best friend</p>
                     </div>
-                </div>
-            </div>
+                    <div class="row gx-5 justify-content-center">
+                        <!-- Dog Food Plan -->
+                        <div class="col-lg-6 col-xl-4 mb-4">
+                            <div class="card mb-5 mb-xl-0 pricing-card food-card">
+                                <div class="card-body p-5">
+                                    <div class="small text-uppercase fw-bold">Dog Food Plan</div>
+                                    <div class="mb-3">
+                                        <span class="display-4 fw-bold">$20</span>
+                                        <span class="">/ mo.</span>
+                                    </div>
+                                    <ul class="list-unstyled mb-4">
+                                        <li class="mb-2"><i class="bi bi-check-circle-fill text-success"></i> 5kg Premium Dog Food</li>
+                                        <li class="mb-2"><i class="bi bi-check-circle-fill text-success"></i> Grain-Free Options</li>
+                                        <li class="mb-2"><i class="bi bi-check-circle-fill text-success"></i> Monthly Delivery</li>
+                                        <li class="mb-2"><i class="bi bi-x-circle-fill text-light"></i> Treat Packs</li>
+                                        <li class="mb-2"><i class="bi bi-x-circle-fill text-light"></i> Custom Meal Plan</li>
+                                    </ul>
+                                    <div class="d-grid"><a class="btn btn-outline-primary mt-3" href="#!">Choose Plan</a></div>
+                                </div>
+                            </div>
+                        </div>
 
-            <!-- Shelter Plan -->
-            <div class="col-lg-6 col-xl-4">
-                <div class="card mb-5 mb-xl-0">
-                    <div class="card-body p-5">
-                        <div class="small text-uppercase fw-bold">
-                            <i class="bi bi-star-fill text-warning"></i>
-                            Shelter Stay
+                        <!-- Shelter Plan -->
+                        <div class="col-lg-6 col-xl-4 mb-4">
+                            <div class="card mb-5 mb-xl-0 pricing-card shelter-card">
+                                <div class="card-body p-5">
+                                    <div class="small text-uppercase fw-bold">
+                                        <i class="bi bi-star-fill text-warning"></i>
+                                        Shelter Stay
+                                    </div>
+                                    <div class="mb-3">
+                                        <span class="display-4 fw-bold">$50</span>
+                                        <span class="">/ week</span>
+                                    </div>
+                                    <ul class="list-unstyled mb-4">
+                                        <li class="mb-2"><i class="bi bi-check-circle-fill text-success"></i> Safe Indoor Kennel</li>
+                                        <li class="mb-2"><i class="bi bi-check-circle-fill text-success"></i> Daily Walks</li>
+                                        <li class="mb-2"><i class="bi bi-check-circle-fill text-success"></i> 24/7 Monitoring</li>
+                                        <li class="mb-2"><i class="bi bi-check-circle-fill text-success"></i> Vet Checkups</li>
+                                        <li class="mb-2"><i class="bi bi-x-circle-fill text-light"></i> Grooming Services</li>
+                                    </ul>
+                                    <div class="d-grid"><a class="btn btn-primary mt-3" href="#!">Choose Plan</a></div>
+                                </div>
+                            </div>
                         </div>
-                        <div class="mb-3">
-                            <span class="display-4 fw-bold">$50</span>
-                            <span class="text-muted">/ week</span>
-                        </div>
-                        <ul class="list-unstyled mb-4">
-                            <li class="mb-2"><i class="bi bi-check text-primary"></i> Safe Indoor Kennel</li>
-                            <li class="mb-2"><i class="bi bi-check text-primary"></i> Daily Walks</li>
-                            <li class="mb-2"><i class="bi bi-check text-primary"></i> 24/7 Monitoring</li>
-                            <li class="mb-2"><i class="bi bi-check text-primary"></i> Vet Checkups</li>
-                            <li class="mb-2 text-muted"><i class="bi bi-x"></i> Grooming Services</li>
-                        </ul>
-                        <div class="d-grid"><a class="btn btn-primary" href="#!">Choose Plan</a></div>
-                    </div>
-                </div>
-            </div>
 
-            <!-- Premium Clothing Package -->
-            <div class="col-lg-6 col-xl-4">
-                <div class="card">
-                    <div class="card-body p-5">
-                        <div class="small text-uppercase fw-bold text-muted">Clothing & Accessories</div>
-                        <div class="mb-3">
-                            <span class="display-4 fw-bold">$75</span>
-                            <span class="text-muted">/ month</span>
+                        <!-- Premium Clothing Package -->
+                        <div class="col-lg-6 col-xl-4 mb-4">
+                            <div class="card pricing-card clothing-card">
+                                <div class="card-body p-5">
+                                    <div class="small text-uppercase fw-bold">Clothing & Accessories</div>
+                                    <div class="mb-3">
+                                        <span class="display-4 fw-bold">$75</span>
+                                        <span class="">/ month</span>
+                                    </div>
+                                    <ul class="list-unstyled mb-4">
+                                        <li class="mb-2"><i class="bi bi-check-circle-fill text-success"></i> 3 Custom Outfits</li>
+                                        <li class="mb-2"><i class="bi bi-check-circle-fill text-success"></i> Seasonal Wear</li>
+                                        <li class="mb-2"><i class="bi bi-check-circle-fill text-success"></i> Leash + Collar Set</li>
+                                        <li class="mb-2"><i class="bi bi-check-circle-fill text-success"></i> Accessories (bandanas, bows)</li>
+                                        <li class="mb-2"><i class="bi bi-check-circle-fill text-success"></i> Home Delivery</li>
+                                    </ul>
+                                    <div class="d-grid"><a class="btn btn-outline-primary mt-3" href="#!">Choose Plan</a></div>
+                                </div>
+                            </div>
                         </div>
-                        <ul class="list-unstyled mb-4">
-                            <li class="mb-2"><i class="bi bi-check text-primary"></i> 3 Custom Outfits</li>
-                            <li class="mb-2"><i class="bi bi-check text-primary"></i> Seasonal Wear</li>
-                            <li class="mb-2"><i class="bi bi-check text-primary"></i> Leash + Collar Set</li>
-                            <li class="mb-2"><i class="bi bi-check text-primary"></i> Accessories (bandanas, bows)</li>
-                            <li class="mb-2"><i class="bi bi-check text-primary"></i> Home Delivery</li>
-                        </ul>
-                        <div class="d-grid"><a class="btn btn-outline-primary" href="#!">Choose Plan</a></div>
                     </div>
                 </div>
-            </div>
-        </div>
-    </div>
-</section>
+            </section>
+        </main>
 
         <!-- Footer-->
         <footer class="bg-dark py-4 mt-auto">
             <div class="container px-5">
                 <div class="row align-items-center justify-content-between flex-column flex-sm-row">
-                    <div class="col-auto"><div class="small m-0 text-white">Copyright &copy; Your Website 2023</div></div>
+                    <div class="col-auto"><div class="small m-0 text-white">Copyright &copy; Paw Palace 2023</div></div>
                     <div class="col-auto">
                         <a class="link-light small" href="#!">Privacy</a>
                         <span class="text-white mx-1">&middot;</span>
